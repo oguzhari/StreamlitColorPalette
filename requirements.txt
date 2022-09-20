@@ -4,7 +4,6 @@ matplotlib
 pillow
 easydev==0.12.0
 colormap==1.0.4
-opencv-python==4.5.5.64
+opencv-python
 colorgram.py==1.2.0
 extcolors==1.0.0
-python3-opencv
