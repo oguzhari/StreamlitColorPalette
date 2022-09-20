@@ -11,6 +11,7 @@ with tab1:
             ' Baskın renklerin olduğu görsellerde tolerans değerini yükseltmeniz önerilir.')
     zoom = st.text_input('Yakınlaştırma', '2.5')
     st.caption('Çıktı görselin yakınlaştırılma oranıdır. Değer büyüdükçe, çıktı görseli daha da yakınlaştırılır.')
+    
     if st.button('Renk Paleti Oluştur'):
         exact_color('test.jpeg', 900, int(tolerans), float(zoom))
         st.image('output.png', use_column_width=True)
@@ -20,10 +21,9 @@ with tab1:
 with tab2:
     st.title('Renk Paleti Oluşturma')
     uploaded = st.file_uploader('Görsel yükleyin', type=['png', 'jpg', 'jpeg'])
-    img = None
 
     if uploaded:
-        st.subheader('Görsel yükleniyor...')
+        st.caption('Görsel yükleniyor...')
         st.image(uploaded, use_column_width=True)
         img = Image.open(uploaded, mode='r')
         img.save('uploaded.png')
