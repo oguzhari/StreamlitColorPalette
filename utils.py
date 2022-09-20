@@ -103,4 +103,5 @@ def exact_color(input_image, resize, tolerance, zoom):
     my_bar.progress(90)
     plt.savefig('output.png')
     my_bar.progress(100)
+
     #return plt

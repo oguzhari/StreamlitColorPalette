@@ -14,9 +14,11 @@ with tab1:
     if st.button('Renk Paleti Oluştur'):
         exact_color('test.jpeg', 900, int(tolerans), float(zoom))
         st.image('output.png', use_column_width=True)
+        st.caption(
+            "Renk Paleti için kaynak kodu: https://towardsdatascience.com/image-color-extraction-with-python-in-4-steps-8d9370d9216e")
+
 with tab2:
     st.title('Renk Paleti Oluşturma')
-    st.subheader('Kendi görselinizi yükleyin')
     uploaded = st.file_uploader('Görsel yükleyin', type=['png', 'jpg', 'jpeg'])
     img = None
 
@@ -33,4 +35,5 @@ with tab2:
     if st.button('Renk Paleti Oluştur', key='button_self'):
         exact_color('uploaded.png', 900, int(tolerans), float(zoom))
         st.image('output.png', use_column_width=True)
+        st.caption("Renk Paleti için kaynak kodu: https://towardsdatascience.com/image-color-extraction-with-python-in-4-steps-8d9370d9216e")
 
